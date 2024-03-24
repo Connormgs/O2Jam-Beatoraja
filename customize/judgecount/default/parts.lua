@@ -31,11 +31,11 @@ local function load(g)
 		
 		
 		
-		{id = "count-pr",		dst = {{x = g.frame.judgecount.x + 310,	y = g.frame.judgecount.y - 107, w = 13, h = 17}}},
-		{id = "count-bd",		dst = {{x = g.frame.judgecount.x + 125,	y = g.frame.judgecount.y - 107, w = 13, h = 17}}},
+		{id = "count-pr",		dst = {{x = g.frame.judgecount.x + 325,	y = g.frame.judgecount.y - 195, w = 13, h = 17}}},
+		{id = "count-bd",		dst = {{x = g.frame.judgecount.x + 145,	y = g.frame.judgecount.y - 195, w = 13, h = 17}}},
 		
-		{id = "count-gr",		dst = {{x = g.frame.judgecount.x + 310,	y = g.frame.judgecount.y - 82, w = 13, h = 17}}},
-		{id = "count-pg",		dst = {{x = g.frame.judgecount.x + 125,	y = g.frame.judgecount.y - 82, w = 13, h = 17}}},
+		{id = "count-gr",		dst = {{x = g.frame.judgecount.x + 325,	y = g.frame.judgecount.y - 170, w = 13, h = 17}}},
+		{id = "count-pg",		dst = {{x = g.frame.judgecount.x + 145,	y = g.frame.judgecount.y - 170, w = 13, h = 17}}},
 	
 	}
 	

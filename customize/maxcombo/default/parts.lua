@@ -8,7 +8,7 @@ local function load(g)
 	parts.value = {{id = "maxcombo-n", src = "src-maxcombo", x = 0, y = 17, w = 130, h = 17, divx = 10, digit = 5, align = 1, ref = 105}}
 	parts.destination = {
 		
-		{id = "maxcombo-n",	dst = {{x = g.frame.maxcombo.x + 120,	y = g.frame.maxcombo.y - 26, w = 13, h = 17}}}
+		{id = "maxcombo-n",	dst = {{x = g.frame.maxcombo.x + 140,	y = g.frame.maxcombo.y - 113, w = 13, h = 17}}}
 	}
 	
 	return parts	

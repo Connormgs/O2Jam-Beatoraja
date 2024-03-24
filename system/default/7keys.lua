@@ -93,7 +93,7 @@ local function load(header)
 
 	-- 判定文字表示倍率
 	t.lanes.judge.magnification = 1
-
+	t.lanes.combo.magnification = 1
 	for i = 1, #t.lanes.x do
 		-- 判定文字
 		t.lanes.judge.x[i]			= t.lanes.center_x[i]

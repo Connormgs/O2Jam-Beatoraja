@@ -73,6 +73,7 @@ init.settings = {
 		judgeline	= {},
 		bomb		= {},
 		judge		= {x = {}, y = {}},
+		combo		= {x = {}, y = {}},
 		ghost		= {x = {}, y = {}},
 		judgedetail	= {x = {}, y = {}}
 	

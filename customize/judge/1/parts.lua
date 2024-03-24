@@ -28,7 +28,6 @@ local function load(g)
 	judge.nw_scale		= 0
 	judge.nh_scale		= 0
 	judge.na_scale		= 255
-	
 	if parts.JUDGE_SCALE_ANIMATION_TIME		then judge.time_scale	= parts.JUDGE_SCALE_ANIMATION_TIME		end
 	if parts.JUDGEF_SCALE_ANIMATION_WIDTH	then judge.fw_scale		= parts.JUDGEF_SCALE_ANIMATION_WIDTH * g.lanes.judge.magnification	end
 	if parts.JUDGEF_SCALE_ANIMATION_HEIGHT	then judge.fh_scale		= parts.JUDGEF_SCALE_ANIMATION_HEIGHT * g.lanes.judge.magnification	end

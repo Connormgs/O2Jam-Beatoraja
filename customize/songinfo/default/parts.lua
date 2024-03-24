@@ -8,7 +8,7 @@ local function load(t)
 		{id = "table",			font = "system-font", size = t.frame.songinfo.h, align = 1, ref = 1003, overflow = 1}
 	}
 	parts.destination = {
-		{id = "music-title", dst = {{ x = t.frame.songinfo.x + 750, y = t.frame.songinfo.y + 1035, w = t.frame.songinfo.w, h = t.frame.songinfo.h, },{time = 100, a = 255}}},
+		{id = "music-title", dst = {{ x = t.frame.songinfo.x + 750, y = t.frame.songinfo.y + 970, w = t.frame.songinfo.w, h = t.frame.songinfo.h, },{time = 100, a = 255}}},
 		
 	}			
 	return parts	

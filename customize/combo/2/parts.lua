@@ -67,9 +67,9 @@ local function load(g)
 		{id = "src-gd",				path = "../customize/judge/*" .. "/F_GD.png"},
 		{id = "src-bd",				path = "../customize/judge/*" .. "/F_BD.png"},
 		{id = "src-pr",				path = "../customize/judge/*" .. "/F_PR.png"},
-		{id = "src-pgn",			path = "../customize/combo/*" .. "/N_PG.png"},
-		{id = "src-grn",			path = "../customize/combo/*" .. "/N_GR.png"},
-		{id = "src-gdn",			path = "../customize/combo/*" .. "/N_GD.png"}
+		{id = "src-pgn",			path = "../customize/judge/*" .. "/N_PG.png"},
+		{id = "src-grn",			path = "../customize/judge/*" .. "/N_GR.png"},
+		{id = "src-gdn",			path = "../customize/judge/*" .. "/N_GD.png"}
 	}
 	
 	parts.image = {

@@ -55,11 +55,11 @@ local function load(g)
 		{id = "sps-score"},
 		{id = "sps-scorerate"},
 		{id = "sps-maxcombo"},
-		{id = "sps-diffbest"},
-		{id = "sps-difftarget"},
-		{id = "sps-rankpace"},
+		--{id = "sps-diffbest"},
+		--{id = "sps-difftarget"},
+		--{id = "sps-rankpace"},
 		{id = "sps-judgecount"},
-		{id = "sps-timeleft"},
+		--{id = "sps-timeleft"},
 		
 		-- プレイエリア
 		{id = "sps-lanebackground"},
@@ -72,7 +72,7 @@ local function load(g)
 		{id = "sps-bomb"},
 		
 		{id = "sps-combo"},
-		{id = "sps-judgedetail"},
+		--{id = "sps-judgedetail"},
 		{id = "sps-ghost"},
 		
 		{id = "sps-timingvisualizer"},

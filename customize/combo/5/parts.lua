@@ -19,7 +19,7 @@ local function load(g)
 		judge.fy[2] = g.lanes.judge.y[2]
 	end
 	judge.nx = judge.fw + parts.JUDGE_SPACE * g.lanes.judge.magnification
-	judge.ny = 0
+	judge.ny = 200
 	
 	judge.time_scale	= 100
 	judge.fw_scale		= 0
@@ -55,9 +55,9 @@ local function load(g)
 		judge.fx[1]	= g.lanes.center_x[1] - (judge.fw / 2)
 		if g.lanes.x[2] then judge.fx[2] = g.lanes.center_x[2] - (judge.fw / 2) end
 		judge.nx	= judge.fw / 2
-		judge.fy[1]	= judge.fy[1] + judge.nh + parts.JUDGE_SPACE * g.lanes.judge.magnification
+		judge.fy[1]	= 350
 		judge.fy[2]	= judge.fy[2] + judge.nh + parts.JUDGE_SPACE * g.lanes.judge.magnification
-		judge.ny	= (judge.nh + parts.JUDGE_SPACE * g.lanes.judge.magnification) * -1
+		judge.ny	= 200
 		judge.h		= judge.fh + judge.nh + parts.JUDGE_SPACE * g.lanes.judge.magnification
 	end
 	

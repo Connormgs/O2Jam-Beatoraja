@@ -17,7 +17,7 @@ local function load(header)
 	t.lane.lane.a		= 96
 
 	-- ノーツの横幅{{1P}, {2P}}
-	t.lane.notes.w		= {{60, 54, 60, 64, 60, 54, 60, 96}}
+	t.lane.notes.w		= {{60, 54, 60, 64, 60, 56, 62, 96}}
 	-- ノーツの縦幅{{1P}, {2P}}
 	t.lane.notes.h		= {{20, 20, 20, 20, 20, 20, 20, 20}}
 
@@ -94,12 +94,13 @@ local function load(header)
 
 	-- 判定文字表示倍率
 	t.lanes.judge.magnification = 1
-
+	t.lanes.combo.magnification = 1
 	for i = 1, #t.lanes.x do
 		-- 判定文字
 		t.lanes.judge.x[i]			= t.lanes.center_x[i]
 		t.lanes.judge.y[i]			= t.lanes.y[i] + 160
-		
+		t.lanes.combo.x[i]			= t.lanes.center_x[i]
+		t.lanes.combo.y[i]			= t.lanes.y[i] + 160
 		-- ゴーストスコア
 		t.lanes.ghost.x[i]			= t.lanes.center_x[i]
 		t.lanes.ghost.y[i]			= t.lanes.judge.y[i] + 180
