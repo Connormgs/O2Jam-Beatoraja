@@ -2,24 +2,24 @@ local parts = {}
 
 local function load(g)
 	
-	local parts = dofile(skin_config.get_path("../customize/judge/*") .. "/judge.lua")
+	local parts = dofile(skin_config.get_path("../customize/combo/*") .. "/judge.lua")
 	local judge = {}
 	judge.fx = {0, 0}
 	judge.fy = {0, 0}
 	
-	judge.fw = parts.JUDGEF_WIDTH * g.lanes.judge.magnification
-	judge.fh = parts.JUDGEF_HEIGHT * g.lanes.judge.magnification
-	judge.nw = parts.JUDGEN_WIDTH * g.lanes.judge.magnification
-	judge.nh = parts.JUDGEN_HEIGHT * g.lanes.judge.magnification
+	judge.fw = parts.JUDGEF_WIDTH	* g.lanes.judge.magnification
+	judge.fh = parts.JUDGEF_HEIGHT	* g.lanes.judge.magnification
+	judge.nw = parts.JUDGEN_WIDTH	* g.lanes.judge.magnification
+	judge.nh = parts.JUDGEN_HEIGHT	* g.lanes.judge.magnification
 	
-	judge.fx[1] = g.lanes.center_x[1] - ((judge.fw + parts.JUDGE_SPACE * g.lanes.judge.magnification) / 2)
+	judge.fx[1] = g.lanes.center_x[1] - ((judge.fw + (parts.JUDGE_SPACE * g.lanes.judge.magnification)) / 2)
 	judge.fy[1] = g.lanes.judge.y[1]
 	if g.lanes.x[2] then
-		judge.fx[2] = g.lanes.center_x[2] - ((judge.fw + parts.JUDGE_SPACE * g.lanes.judge.magnification) / 2)
+		judge.fx[2] = g.lanes.center_x[2] - ((judge.fw + (parts.JUDGE_SPACE * g.lanes.judge.magnification)) / 2)
 		judge.fy[2] = g.lanes.judge.y[2]
 	end
-	judge.nx = judge.fw + parts.JUDGE_SPACE * g.lanes.judge.magnification
-	judge.ny = 200
+	judge.nx = judge.fw + (parts.JUDGE_SPACE * g.lanes.judge.magnification)
+	judge.ny = 0
 	
 	judge.time_scale	= 100
 	judge.fw_scale		= 0
@@ -30,11 +30,11 @@ local function load(g)
 	judge.na_scale		= 255
 	
 	if parts.JUDGE_SCALE_ANIMATION_TIME		then judge.time_scale	= parts.JUDGE_SCALE_ANIMATION_TIME		end
-	if parts.JUDGEF_SCALE_ANIMATION_WIDTH	then judge.fw_scale		= parts.JUDGEF_SCALE_ANIMATION_WIDTH * g.lanes.judge.magnification	end
-	if parts.JUDGEF_SCALE_ANIMATION_HEIGHT	then judge.fh_scale		= parts.JUDGEF_SCALE_ANIMATION_HEIGHT * g.lanes.judge.magnification	end
+	if parts.JUDGEF_SCALE_ANIMATION_WIDTH	then judge.fw_scale		= parts.JUDGEF_SCALE_ANIMATION_WIDTH	* g.lanes.judge.magnification	end
+	if parts.JUDGEF_SCALE_ANIMATION_HEIGHT	then judge.fh_scale		= parts.JUDGEF_SCALE_ANIMATION_HEIGHT	* g.lanes.judge.magnification	end
 	if parts.JUDGEF_SCALE_ANIMATION_OPACITY	then judge.fa_scale		= parts.JUDGEF_SCALE_ANIMATION_OPACITY	end
-	if parts.JUDGEN_SCALE_ANIMATION_WIDTH	then judge.nw_scale		= parts.JUDGEN_SCALE_ANIMATION_WIDTH * g.lanes.judge.magnification	end
-	if parts.JUDGEN_SCALE_ANIMATION_HEIGHT	then judge.nh_scale		= parts.JUDGEN_SCALE_ANIMATION_HEIGHT * g.lanes.judge.magnification	end
+	if parts.JUDGEN_SCALE_ANIMATION_WIDTH	then judge.nw_scale		= parts.JUDGEN_SCALE_ANIMATION_WIDTH	* g.lanes.judge.magnification	end
+	if parts.JUDGEN_SCALE_ANIMATION_HEIGHT	then judge.nh_scale		= parts.JUDGEN_SCALE_ANIMATION_HEIGHT	* g.lanes.judge.magnification	end
 	if parts.JUDGEN_SCALE_ANIMATION_OPACITY	then judge.na_scale		= parts.JUDGEN_SCALE_ANIMATION_OPACITY	end
 	
 	judge.h = judge.fh
@@ -47,18 +47,18 @@ local function load(g)
 		judge.fx[1]	= g.lanes.center_x[1] - (judge.fw / 2)
 		if g.lanes.x[2] then judge.fx[2] = g.lanes.center_x[2] - (judge.fw / 2) end
 		judge.nx	= judge.fw / 2
-		judge.ny	= judge.fh + parts.JUDGE_SPACE * g.lanes.judge.magnification
-		judge.h		= judge.fh + judge.nh + parts.JUDGE_SPACE * g.lanes.judge.magnification
+		judge.ny	= judge.fh + parts.JUDGE_SPACE
+		judge.h		= judge.fh + judge.nh + parts.JUDGE_SPACE
 		
 	elseif parts.JUDGE_FORMAT == 3 then
 		judge.shift	= false
 		judge.fx[1]	= g.lanes.center_x[1] - (judge.fw / 2)
 		if g.lanes.x[2] then judge.fx[2] = g.lanes.center_x[2] - (judge.fw / 2) end
 		judge.nx	= judge.fw / 2
-		judge.fy[1]	= 350
-		judge.fy[2]	= judge.fy[2] + judge.nh + parts.JUDGE_SPACE * g.lanes.judge.magnification
-		judge.ny	= 200
-		judge.h		= judge.fh + judge.nh + parts.JUDGE_SPACE * g.lanes.judge.magnification
+		judge.fy[1]	= judge.fy[1] + judge.nh + parts.JUDGE_SPACE
+		judge.fy[2]	= judge.fy[2] + judge.nh + parts.JUDGE_SPACE
+		judge.ny	= (judge.nh + parts.JUDGE_SPACE) * -1
+		judge.h		= judge.fh + judge.nh + parts.JUDGE_SPACE
 	end
 	
 	parts.source = {
@@ -68,8 +68,8 @@ local function load(g)
 		{id = "src-bd",				path = "../customize/judge/*" .. "/F_BD.png"},
 		{id = "src-pr",				path = "../customize/judge/*" .. "/F_PR.png"},
 		{id = "src-pgn",			path = "../customize/combo/*" .. "/N_PG.png"},
-		{id = "src-grn",			path = "../customize/combo/*" .. "/N_GR.png"},
-		{id = "src-gdn",			path = "../customize/combo/*" .. "/N_GD.png"}
+		{id = "src-grn",			path = "../customize/judge/*" .. "/N_GR.png"},
+		{id = "src-gdn",			path = "../customize/judge/*" .. "/N_GD.png"}
 	}
 	
 	parts.image = {

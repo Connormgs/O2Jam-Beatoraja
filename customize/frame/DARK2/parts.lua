@@ -72,6 +72,7 @@ local function load(g)
 		--{id = "sps-coverduration"},
 		{id = "sps-bomb"},
 		{id = "sps-judge"},
+		--{id = "sps-combo"},
 		--{id = "sps-judgedetail"},
 		--{id = "sps-ghost"},
 		

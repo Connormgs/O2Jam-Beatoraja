@@ -1,7 +1,7 @@
 return {
 -- 判定文字の表示サイズ
-JUDGEF_WIDTH = 220,
-JUDGEF_HEIGHT = 200,
+JUDGEF_WIDTH = 512,
+JUDGEF_HEIGHT = 512,
 
 -- 判定文字画像の分割数(縦)
 DIVY_F_PG = 1,
@@ -11,8 +11,8 @@ DIVY_F_BD = 1,
 DIVY_F_PR = 1,
 
 -- 判定数字の表示サイズ(1桁)	
-JUDGEN_WIDTH = 36,
-JUDGEN_HEIGHT = 100,
+JUDGEN_WIDTH = 60,
+JUDGEN_HEIGHT = 200,
 
 -- 判定数字画像の分割数(縦)
 DIVY_N_PG = 1,

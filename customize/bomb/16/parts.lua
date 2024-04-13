@@ -35,17 +35,17 @@ local function load(g)
 		end
 		-- default
 		for i, v in ipairs(bomb_id) do
-			table.insert(parts.image, {id = "bomb-1" .. v,			src = "src-bomb", x = 0, y = 0,		w = 6400, h = 300, divx = 16, divy = 1, timer = 49 + i, cycle = 400})
+			table.insert(parts.image, {id = "bomb-1" .. v,			src = "src-bomb", x = 0, y = 300,		w = 6400, h = 300, divx = 16, divy = 1, timer = 49 + i, cycle = 400})
 			table.insert(parts.image, {id = "bomb-pg-1" .. v,		src = "src-bomb", x = 0, y = 300,	w = 6400, h = 300, divx = 16, divy = 1, timer = 49 + i, cycle = 400})
-			table.insert(parts.image, {id = "hold1" .. v,			src = "src-bomb", x = 0, y = 900,	w = 6400, h = 300, divx = 16, divy = 1, timer = 69 + i, cycle = 500})
-			table.insert(parts.image, {id = "hold1" .. v .. "-b",	src = "src-bomb", x = 0, y = 600,	w = 6400, h = 300, divx = 16, divy = 1, timer = 69 + i, cycle = 251})
+			table.insert(parts.image, {id = "hold1" .. v,			src = "src-bomb", x = 0, y = 300,	w = 6400, h = 300, divx = 16, divy = 1, timer = 69 + i, cycle = 500})
+			table.insert(parts.image, {id = "hold1" .. v .. "-b",	src = "src-bomb", x = 0, y = 300,	w = 6400, h = 300, divx = 16, divy = 1, timer = 69 + i, cycle = 251})
 			table.insert(parts.imageset, {id = "bomb1" .. v,		ref = 499 + i, images = {"bomb-1" .. v, "bomb-dummy"}})
 			table.insert(parts.imageset, {id = "bombpg1" .. v,		ref = 499 + i, images = {"bomb-dummy", "bomb-pg-1" .. v}})
 			if g.type == 2 or g.type == 3 then
-				table.insert(parts.image, {id = "bomb-2" .. v,			src = "src-bomb", x = 0, y = 0,		w = 6400, h = 300, divx = 16, divy = 1, timer = 59 + i, cycle = 251})
+				table.insert(parts.image, {id = "bomb-2" .. v,			src = "src-bomb", x = 0, y = 300,		w = 6400, h = 300, divx = 16, divy = 1, timer = 59 + i, cycle = 251})
 				table.insert(parts.image, {id = "bomb-pg-2" .. v,		src = "src-bomb", x = 0, y = 300,	w = 6400, h = 300, divx = 16, divy = 1, timer = 59 + i, cycle = 251})
-				table.insert(parts.image, {id = "hold2" .. v,			src = "src-bomb", x = 0, y = 900,	w = 6400, h = 300, divx = 16, divy = 1, timer = 79 + i, cycle = 500})
-				table.insert(parts.image, {id = "hold2" .. v .. "-b",	src = "src-bomb", x = 0, y = 600,	w = 6400, h = 300, divx = 16, divy = 1, timer = 79 + i, cycle = 251})
+				table.insert(parts.image, {id = "hold2" .. v,			src = "src-bomb", x = 0, y = 300,	w = 6400, h = 300, divx = 16, divy = 1, timer = 79 + i, cycle = 500})
+				table.insert(parts.image, {id = "hold2" .. v .. "-b",	src = "src-bomb", x = 0, y = 300,	w = 6400, h = 300, divx = 16, divy = 1, timer = 79 + i, cycle = 251})
 				table.insert(parts.imageset, {id = "bomb2" .. v,		ref = 509 + i, images = {"bomb-2" .. v, "bomb-dummy"}})
 				table.insert(parts.imageset, {id = "bombpg2" .. v,		ref = 509 + i, images = {"bomb-dummy", "bomb-pg-2" .. v}})
 			end

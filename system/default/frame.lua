@@ -42,7 +42,7 @@ local function load(g)
 		{id = "sps-extension5"},
 		
 		-- BGA
-		{id = "sps-bga"},
+		--{id = "sps-bga"},
 		
 		-- フレーム関連
 		{id = "sps-device"},
@@ -70,8 +70,7 @@ local function load(g)
 		{id = "sps-cover"},
 		{id = "sps-coverduration"},
 		{id = "sps-bomb"},
-		
-		{id = "sps-combo"},
+
 		--{id = "sps-judgedetail"},
 		{id = "sps-ghost"},
 		

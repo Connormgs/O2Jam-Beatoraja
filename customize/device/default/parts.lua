@@ -19,15 +19,14 @@ local function load(g)
 		for i2, v2 in ipairs(v1) do
 			if (v2 % 2) == 1 then
 				key.w[i1][v2] = g.lane.lane.w[i1][v2] + (g.lane.line.px * 2)
-				key.x[i1][v2] = g.lane.lane.x[i1][v2] - g.lane.line.px
-				key.y[i1][v2] = g.lane.lane.y[i1][v2] - g.lane.line.px
+				key.x[i1][v2] = g.lane.lane.x[i1][v2] - g.lane.line.px + 7
 			else
 				key.w[i1][v2] = g.lane.lane.w[i1][v2]
 				key.x[i1][v2] = g.lane.lane.x[i1][v2]
 			end
 			lane_x[i1][v2] = g.lane.lane.x[i1][v2]
 		end
-		key.y[i1] = g.lanes.y[i1] - key.h
+		key.y[i1] = g.lanes.y[i1] - key.h - 7
 		sc.x[i1] = lane_x[i1][#lane_x[i1]]
 		sc.w[i1] = g.lane.lane.w[i1][#lane_x[i1]]
 		sc.y[i1] = key.y[i1]
@@ -46,9 +45,7 @@ local function load(g)
 		{id = "src-key-b",		path = "../customize/device/*" .. "/B.png"},
 		{id = "src-key-wf",		path = "../customize/device/*" .. "/WF.png"},
 		{id = "src-key-bf",		path = "../customize/device/*" .. "/BF.png"},
-		{id = "src-sc-base",	path = "../customize/device/*" .. "/TABLE_BASE.png"},
-		{id = "src-sc-table",	path = "../customize/device/*" .. "/TABLE.png"},
-		
+	
 	}
 	
 	parts.image = {
@@ -58,7 +55,7 @@ local function load(g)
 		{id = "key-bf",		src = "src-key-bf",		x = 0, y = 0, w = -1, h = -1},
 		{id = "sc-base",	src = "src-sc-base",	x = 0, y = 0, w = -1, h = -1},
 		{id = "sc-table",	src = "src-sc-table",	x = 0, y = 0, w = -1, h = -1},
-		
+		{id = "sc-record",	src = "src-sc-record",	x = 0, y = 0, w = -1, h = -1}
 	}
 	
 	local key_types = {}

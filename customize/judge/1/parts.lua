@@ -28,6 +28,7 @@ local function load(g)
 	judge.nw_scale		= 0
 	judge.nh_scale		= 0
 	judge.na_scale		= 255
+	
 	if parts.JUDGE_SCALE_ANIMATION_TIME		then judge.time_scale	= parts.JUDGE_SCALE_ANIMATION_TIME		end
 	if parts.JUDGEF_SCALE_ANIMATION_WIDTH	then judge.fw_scale		= parts.JUDGEF_SCALE_ANIMATION_WIDTH * g.lanes.judge.magnification	end
 	if parts.JUDGEF_SCALE_ANIMATION_HEIGHT	then judge.fh_scale		= parts.JUDGEF_SCALE_ANIMATION_HEIGHT * g.lanes.judge.magnification	end
@@ -54,9 +55,9 @@ local function load(g)
 		judge.fx[1]	= g.lanes.center_x[1] - (judge.fw / 2)
 		if g.lanes.x[2] then judge.fx[2] = g.lanes.center_x[2] - (judge.fw / 2) end
 		judge.nx	= judge.fw / 2
-		judge.fy[1]	= judge.fy[1] + judge.nh + parts.JUDGE_SPACE * g.lanes.judge.magnification
+		judge.fy[1]	= 250
 		judge.fy[2]	= judge.fy[2] + judge.nh + parts.JUDGE_SPACE * g.lanes.judge.magnification
-		judge.ny	= (judge.nh + parts.JUDGE_SPACE * g.lanes.judge.magnification) * -1
+		judge.ny	= 280
 		judge.h		= judge.fh + judge.nh + parts.JUDGE_SPACE * g.lanes.judge.magnification
 	end
 	

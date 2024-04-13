@@ -94,13 +94,12 @@ local function load(header)
 
 	-- 判定文字表示倍率
 	t.lanes.judge.magnification = 1
-	t.lanes.combo.magnification = 1
+
 	for i = 1, #t.lanes.x do
 		-- 判定文字
 		t.lanes.judge.x[i]			= t.lanes.center_x[i]
 		t.lanes.judge.y[i]			= t.lanes.y[i] + 160
-		t.lanes.combo.x[i]			= t.lanes.center_x[i]
-		t.lanes.combo.y[i]			= t.lanes.y[i] + 160
+	
 		-- ゴーストスコア
 		t.lanes.ghost.x[i]			= t.lanes.center_x[i]
 		t.lanes.ghost.y[i]			= t.lanes.judge.y[i] + 180

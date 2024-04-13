@@ -2,7 +2,7 @@ local parts = {}
 
 local function load(g)
 	
-	local parts = dofile(skin_config.get_path("../customize/judge/*") .. "/judge.lua")
+	local parts = dofile(skin_config.get_path("../customize/combo/*") .. "/judge.lua")
 	local judge = {}
 	judge.fx = {0, 0}
 	judge.fy = {0, 0}
@@ -67,9 +67,9 @@ local function load(g)
 		{id = "src-gd",				path = "../customize/judge/*" .. "/F_GD.png"},
 		{id = "src-bd",				path = "../customize/judge/*" .. "/F_BD.png"},
 		{id = "src-pr",				path = "../customize/judge/*" .. "/F_PR.png"},
-		{id = "src-pgn",			path = "../customize/judge/*" .. "/N_PG.png"},
-		{id = "src-grn",			path = "../customize/judge/*" .. "/N_GR.png"},
-		{id = "src-gdn",			path = "../customize/judge/*" .. "/N_GD.png"}
+		{id = "src-pga",			path = "../customize/combo/*" .. "/N_PG.png"},
+		{id = "src-grn",			path = "../customize/combo/*" .. "/N_GR.png"},
+		{id = "src-gdn",			path = "../customize/combo/*" .. "/N_GD.png"}
 	}
 	
 	parts.image = {
@@ -82,7 +82,7 @@ local function load(g)
 	}
 	
 	parts.value = {
-		{id = "judgen-pg", src = "src-pgn",	x = 0, y = 0, w = -1, h = -1, divx = 10, divy = parts.DIVY_N_PG, digit = 6, ref = 75, cycle = parts.JUDGE_ANIMATION_CYCLE_PG},
+		{id = "judgen-pg", src = "src-pga",	x = 0, y = 0, w = -1, h = -1, divx = 10, divy = parts.DIVY_N_PG, digit = 6, ref = 75, cycle = parts.JUDGE_ANIMATION_CYCLE_PG},
 		{id = "judgen-gr", src = "src-grn",	x = 0, y = 0, w = -1, h = -1, divx = 10, divy = parts.DIVY_N_GR, digit = 6, ref = 75, cycle = parts.JUDGE_ANIMATION_CYCLE_GR},
 		{id = "judgen-gd", src = "src-gdn",	x = 0, y = 0, w = -1, h = -1, divx = 10, divy = parts.DIVY_N_GD, digit = 6, ref = 75, cycle = parts.JUDGE_ANIMATION_CYCLE_GD},
 		{id = "judgen-bd", src = "src-gdn",	x = 0, y = 0, w = -1, h = -1, divx = 10, divy = parts.DIVY_N_GD, digit = 6, ref = 75, cycle = parts.JUDGE_ANIMATION_CYCLE_GD},
